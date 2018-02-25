@@ -10,7 +10,7 @@
     },
     "authors": "Jonathan Wallace",
     "source": {
-      "http": "http://sourceforge.net/projects/libjson/files/libjson_7.6.1.zip"
+      "http": "https://github.com/sonng/libjson-mirror/releases/download/7.6.1/libjson_7.6.1.zip"
     },
     "compiler_flags": "-DNDEBUG",
     "requires_arc": false,
