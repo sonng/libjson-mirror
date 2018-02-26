@@ -10,7 +10,12 @@ Pod::Spec.new do |s|
     s.compiler_flags = "-DNDEBUG"
     s.requires_arc = false
     s.platform = :ios, 5.0
-    s.source_files = "libjson/*.h", "libjson/_internal/{Source,Dependencies}/**/*.{h,cpp}"
+    s.source_files = 'libjson/*.h', 'libjson/_internal/{Source,Dependencies}/**/*.{h,cpp}'
     s.header_mappings_dir = 'libjson/'
-    s.prepare_command = "\tsed -i .orig 's/^\\(#define JSON_LIBRARY\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n\tsed -i .orig 's/^\\(#define JSON_WRITE_PRIORITY MED\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n\tsed -i .orig 's/^\\(#define JSON_COMMENTS\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n\tsed -i .orig 's/^\\(#define JSON_DEPRECATED_FUNCTIONS\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n"
+    s.prepare_command = <<-CMD
+        sed -i .orig 's/^\\(#define JSON_LIBRARY\\)$/\\/\\/\\1/' libjson/JSONOptions.h
+        sed -i .orig 's/^\\(#define JSON_WRITE_PRIORITY MED\\)$/\\/\\/\\1/' libjson/JSONOptions.h
+        sed -i .orig 's/^\\(#define JSON_COMMENTS\\)$/\\/\\/\\1/' libjson/JSONOptions.h
+        sed -i .orig 's/^\\(#define JSON_DEPRECATED_FUNCTIONS\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n"
+    CMD
 end
