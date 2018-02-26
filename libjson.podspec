@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
         sed -i .orig 's/^\\(#define JSON_LIBRARY\\)$/\\/\\/\\1/' libjson/JSONOptions.h
         sed -i .orig 's/^\\(#define JSON_WRITE_PRIORITY MED\\)$/\\/\\/\\1/' libjson/JSONOptions.h
         sed -i .orig 's/^\\(#define JSON_COMMENTS\\)$/\\/\\/\\1/' libjson/JSONOptions.h
-        sed -i .orig 's/^\\(#define JSON_DEPRECATED_FUNCTIONS\\)$/\\/\\/\\1/' libjson/JSONOptions.h\n"
+        sed -i .orig 's/^\\(#define JSON_DEPRECATED_FUNCTIONS\\)$/\\/\\/\\1/' libjson/JSONOptions.h
     CMD
 end
